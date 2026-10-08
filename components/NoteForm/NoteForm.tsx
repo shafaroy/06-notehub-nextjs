@@ -34,7 +34,7 @@ const validationSchema = Yup.object({
   content: Yup.string()
     .trim()
     .max(500, "Content must contain at most 500 characters")
-    .required("Content is required"),
+    .notRequired(),
 
   tag: Yup.string()
     .oneOf(["Todo", "Work", "Personal", "Meeting", "Shopping"])
